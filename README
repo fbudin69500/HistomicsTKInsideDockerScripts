@@ -1,0 +1,29 @@
+# HistomicsTK docker scripts
+
+## Description
+
+This project contains a set of scripts that are convenient to configure,
+build, and test histomicsTK in its docker container.
+
+The following environment variables need to be defined for these scripts
+to run:
+
+* `HOME`: This should always be defined by the default environment anyway.
+* `HISTOMICS_SOURCE_FOLDER`: Points to the location of your HistomicsTK
+source directory.
+* `HISTOMICS_TESTDATA_FOLDER`: Folder in which the test data will be installed
+on the host computer. This allows to not download the test data every time,
+but keep a cache of it on the host computer.
+
+# Scripts
+
+* deploy.sh: wrapper script around deploy_docker.py HistomicsTK script to mount
+local host source and data folders.
+* configure.sh: docker image to install npm packages to be able to run girder tests.
+* build.sh: configure and build girder inside docker container to build HistomicsTK
+plugin.
+* test.sh: Run girder tests inside container.
+* connect.sh: convenience script to log in the HistomicsTK docker container.
+* cleanbuild.sh: Removes all HistomicsTK docker containers and HistomicsTK files
+installed in $HOME/.histomicstj=k. Pulls and rebuilds all the docker containers, and
+builds and tests HistomicsTK.
