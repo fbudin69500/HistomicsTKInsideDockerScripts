@@ -19,11 +19,11 @@ but keep a cache of it on the host computer.
 
 * deploy.sh: wrapper script around deploy_docker.py HistomicsTK script to mount
 local host source and data folders.
-* configure.sh: docker image to install npm packages to be able to run girder tests.
 * build.sh: configure and build girder inside docker container to build HistomicsTK
 plugin.
 * test.sh: Run girder tests inside container.
 * connect.sh: convenience script to log in the HistomicsTK docker container.
 * cleanbuild.sh: Removes all HistomicsTK docker containers and HistomicsTK files
 installed in $HOME/.histomicstj=k. Pulls and rebuilds all the docker containers, and
-builds and tests HistomicsTK.
+builds and tests HistomicsTK. This script does not mount any host folder into the
+docker image and is intended for debug purpose only.
