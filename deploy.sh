@@ -12,4 +12,4 @@ then
   exit 1
 fi
 
-$HISTOMICS_SOURCE_FOLDER/ansible/deploy_docker.py start --mount $HISTOMICS_SOURCE_FOLDER:/opt/histomicstk/HistomicsTK/ --mount $HISTOMICS_TESTDATA_FOLDER:/data/ $@
+$HISTOMICS_SOURCE_FOLDER/ansible/deploy_docker.py --mount $HISTOMICS_SOURCE_FOLDER:/opt/histomicstk/HistomicsTK/ --mount $HISTOMICS_TESTDATA_FOLDER:/data/ $@
